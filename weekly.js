@@ -1,5 +1,6 @@
 const prompt = require('prompt-sync')();
 
+//function for problems
 function problem(num1,operator,num2){
     let answer;
     if(operator==="+"){
@@ -21,45 +22,32 @@ if (Number(user_answer)===answer){
     return -5;
     }
 }
-
+//max score game
 function maxScore(){
     let score= 0;
     console.log(`let it begin`)
-    let questions=[
-        [3,"+",5],
-        [3,"-",5],
-        [8,"*",7],
-        [3,"+",5],
-        [3,"-",1],
-        [2,"*",9],
-        [3,"+",5],
-        [10,"-",5],
-        [7,"*",5],
-        [3,"+",5],
-        [3,"-",50],
-        [3,"*",5],
-        [30,"+",5],
-        [3,"-",5],
-        [3,"*",10],
-        [6,"+",5],
-        [7,"-",7],
-        [35,"+",2],
-        [5,"-",9],
-        [3,"+",7],
-        [9,"*",5],
-    ];
-    for (let[num1,operator,num2] of questions){
-        score +=problem(num1,operator,num2)
-    }
-    console.log(`the game is over your score is ${score}`)
+   
 
+    for(let x=0;x<20;x++){
+        let num1=Math.floor(Math.random()*10)+1;
+        let num2=Math.floor(Math.random()*10)+1;
+        let operators=["+","-","*"];
+        let operator= operators[Math.floor(Math.random()*operators.length)]
+
+        score+=problem(num1,operator,num2)
+    }
+ 
+    console.log(`the game is over your score is ${score}`)
 }
 
 
+//three and out game
 function threeAndOut(){
 let lives=3;
 let score=0;
 console.log(`welcome to three and out`)
+console.log(prompt(`pick a mode 1)easy 2) medium 3)hard ; `))
+
 while (lives>0){
     let num1= Math.floor(Math.random()*10)+1;
     let num2= Math.floor(Math.random()*10)+1;
@@ -82,22 +70,27 @@ while (lives>0){
         console.log(`wrong -1 life`)
 
     }
-
-} 
-
-console.log(`game over you score is ${score}`)
+    } 
+    console.log(`game over your score is ${score}`)
 }
+
+//main menu function
 function mainMenu(){
     console.log(`please select a game mode`)
     console.log(`1)max score`)
     console.log(`2) three and out `)
+    console.log(`3)quite game`)
     
   while(true){
-    let choice = prompt(`enter 1 or 2 :`)
+    let choice = prompt(`enter 1 or 2 or 3 :`)
     if (choice==="1"){
         maxScore();
     }else if (choice==="2"){
         threeAndOut();
+    }
+    else if (choice==="3"){
+        console.log(`thanks for playing `)
+        break
     }
     else{
         console.log(`invalid option `)
@@ -106,5 +99,6 @@ function mainMenu(){
 
 }
 mainMenu();
+
 
 
