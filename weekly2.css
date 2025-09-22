@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+}
+
+.bar {
+    list-style: none;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.bar li {
+    display: inline-block;
+    font-size: large;
+    padding: 15px 25px;
+}
+
+.bar a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+.bar a:hover {
+    color: #007BFF;
+}
+
+
+.body {
+    background-image: url(the-beacon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end;
+    width: 100%;
+    padding: 20px; 
+    margin-left: auto;
+}
+
+.box {
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid black; 
+    width: 100%;
+    align-items: right;
+}
+
+.beacon {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    border-color: white;
+    width: 400px;
+    
+}
+
+.web {
+    background-color: black;
+    color: white;
+    width: 400px;
+    margin: 100px;
+    
+}
+
+.read {
+    background-color: #36365C;
+    color: white;
+    width: 120px; 
+    text-align: center; 
+    cursor: pointer;}
+
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+figure {
+    flex: 1 1 200px;
+    text-align: center;
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+figure figcaption {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: right;
+    background-color: gray;
+    
+}
+.footer img{
+    width: 50px;
+    height: auto;
+    margin:5px
+}
