@@ -123,7 +123,7 @@ figure figcaption {
 
 .footer {
     display: flex;
-    flex-direction: row;
+     flex-direction: row;
     justify-content: flex-end;
     align-items: right;
     background-color: gray;
@@ -132,5 +132,5 @@ figure figcaption {
 .footer img{
     width: 50px;
     height: auto;
-    margin:5px
+    margin:5px;
 }
